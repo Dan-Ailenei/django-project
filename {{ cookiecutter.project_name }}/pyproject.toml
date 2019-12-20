@@ -5,10 +5,10 @@ description = "first poetry project"
 authors = ["Ailenei Dan <dan.ailenei@rover.com>"]
 
 [tool.poetry.dependencies]
-python = {{ cookiecutter.python_version }}
+python = "{{ cookiecutter.python_version }}"
 {% for req in cookiecutter.requirements.split()|sort -%}
 {% if "[" in req and "]" in req %}
-{{ req[:req.index("[")] }} = {extras = ["{{ req[req.index("[") + 1:req.index("]")] }}"]}
+{{ req[:req.index("[")] }} = {version = "*", extras = ["{{ req[req.index("[") + 1:req.index("]")] }}"]}
 {% else %}
 {{ req }} = "*"
 {% endif %}
