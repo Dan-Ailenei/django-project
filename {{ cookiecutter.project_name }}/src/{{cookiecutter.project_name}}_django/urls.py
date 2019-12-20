@@ -20,4 +20,5 @@ from django.urls import include
 urlpatterns = [
     path('', include('{{ cookiecutter.app_name }}.urls')),
     path('admin/', admin.site.urls),
+    path('login/', LoginView.as_view(), name=)
 ]

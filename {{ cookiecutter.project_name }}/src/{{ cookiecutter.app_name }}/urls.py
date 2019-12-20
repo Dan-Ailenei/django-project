@@ -1,4 +1,4 @@
-app_name = {{ cookiecutter.app_name }}
+app_name = "{{ cookiecutter.app_name }}"
 
 urlpatterns = [
 ]
