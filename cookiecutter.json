@@ -2,5 +2,5 @@
     "project_name": "project_name",
     "app_name": "app_name",
     "python_version": "{{ 3.8 }}",
-    "requirements": "django psycopg2 django-extensions hunter celery[\"redis\"]}"
+    "requirements": "django psycopg2 django-extensions hunter celery[redis]}"
 }

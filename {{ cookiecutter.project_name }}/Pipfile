@@ -8,13 +8,12 @@ verify_ssl = true
 [packages]
 {% for req in cookiecutter.requirements.split()|sort -%}
 {% if "[" in req and "]" in req %}
-{{ req[:req.index("[")] }} = {extras = ["{{ req[req.index("["):req.index("]")] }}"]}
+{{ req[:req.index("[")] }} = {extras = ["{{ req[req.index("[") + 1:req.index("]")] }}"]}
 {% else %}
 {{ req }} = "*"
 {% endif %}
 {% endfor -%}
-celery = {extras = ["redis"]}
-django = "*"
+
 
 [requires]
 python_version = "3.8"
