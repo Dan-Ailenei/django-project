@@ -11,7 +11,7 @@ verify_ssl = true
 {{ req[:req.index("[")] }} = {extras = ["{{ req[req.index("["):req.index("]")] }}"]}
 {% else %}
 {{ req }} = "*"
-{% endif }
+{% endif %}
 {% endfor -%}
 celery = {extras = ["redis"]}
 django = "*"
