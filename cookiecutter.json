@@ -1,6 +1,6 @@
 {
-    "project_name": "{{ cookiecutter.name.lower().replace(' ','_').replace('-','_') }}_project",
-    "app_name": "{{ cookiecutter.name.lower().replace(' ','_').replace('-','_') }}",
+    "project_name": "project_name",
+    "app_name": "app_name",
     "python_version": "{{ 3.8 }}",
     "packages": "django psycopg2 django-extensions hunter celery[\"redis\"]}"
 }
