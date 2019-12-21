@@ -19,8 +19,5 @@ test-results/
 # osx
 .DS_Store
 
-# local docker-compose settings
-.env
-
 # logs
 *.log

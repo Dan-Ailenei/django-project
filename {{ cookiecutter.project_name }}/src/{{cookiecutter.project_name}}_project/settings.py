@@ -51,12 +51,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = '{{ cookiecutter.project_name }}_django.urls'
+ROOT_URLCONF = '{{ cookiecutter.project_name }}_project.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': os.path.join(BASE_DIR, '{{ cookiecutter.project_name }}_django', 'templates'),
+        'DIRS': os.path.join(BASE_DIR, '{{ cookiecutter.project_name }}_project', 'templates'),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '{{ cookiecutter.project_name }}_django.wsgi.application'
+WSGI_APPLICATION = '{{ cookiecutter.project_name }}_project.wsgi.application'
 
 
 # Database
@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static_files', 'static')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '{{ cookiecutter.project_name }}_django', 'static')
+    os.path.join(BASE_DIR, '{{ cookiecutter.project_name }}_project', 'static')
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'static_files', 'media')
