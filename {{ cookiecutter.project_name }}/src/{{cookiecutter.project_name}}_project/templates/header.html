@@ -1,7 +1,7 @@
 {% raw %}
 {% if user.is_authenticated %}
     <div>{{ user.username }}</div>
-{% endraw %}}
+{% endraw %}
     {% set logout_url = "{% url '" + cookiecutter.project_name  +  "_auth:logout'%}" %}
     <a href="{{ logout_url }}">Logout</a>
 
