@@ -1,5 +1,5 @@
 import pytest
-from {{ cookiecutter.app_name }}.models import {{ cookiecutter.project_name|replace('_', ' ')|title|replace(' ', '') }}User as User
+from {{ cookiecutter.project_name }}_auth.models import {{ cookiecutter.project_name|replace('_', ' ')|title|replace(' ', '') }}User as User
 
 
 @pytest.fixture
