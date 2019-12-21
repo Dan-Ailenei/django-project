@@ -1,8 +1,15 @@
 {% raw %}
 {% if user.is_authenticated %}
     <div>{{ user.username }}</div>
-    <a href="{% url 'logout' %}">Logout</a>
+{% endraw %}}
+    {% set logout_url = "{% url '" + cookiecutter.project_name  +  "_auth:logout'%}" %}
+    <a href="{{ logout_url }}">Logout</a>
+
+{% raw %}
 {% else %}
-    <a href="{% url 'login' %}">Login</a>
+{% endraw %}
+    {% set login_url = "{% url '" + cookiecutter.project_name  +  "_auth:login'%}" %}
+    <a href="{{ login_url }}">Login</a>
+{% raw %}
 {% endif %}
 {% endraw %}

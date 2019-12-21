@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 
     '{{ cookiecutter.app_name }}',
     '{{ cookiecutter.project_name }}_auth',
@@ -57,7 +58,7 @@ ROOT_URLCONF = '{{ cookiecutter.project_name }}_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': os.path.join(BASE_DIR, '{{ cookiecutter.project_name }}_project', 'templates'),
+        'DIRS': [os.path.join(BASE_DIR, '{{ cookiecutter.project_name }}_project', 'templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
