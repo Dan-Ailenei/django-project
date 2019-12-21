@@ -15,8 +15,10 @@
     <p>Please login to see this page.</p>
     {% endif %}
 {% endif %}
-
-<form method="post" action="{% url 'login' %}">
+{% endraw %}
+{% set login_url = "{% url '" + cookiecutter.project_name  +  "_auth:login'%}" %}
+<form method="post" action="{{ login_url }}">
+{% raw %}
 {% csrf_token %}
 <table>
 <tr>
