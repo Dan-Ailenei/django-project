@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     '{{ cookiecutter.app_name }}',
+    '{{ cookiecutter.project_name }}_auth',
 ]
 
 MIDDLEWARE = [
@@ -142,5 +143,5 @@ CELERY_RESULT_BACKEND = 'django-db'
 CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL')
 CELERY_BROKER_TRANSPORT_OPTIONS = {'max_retries': 1}
 
-AUTH_USER_MODEL = "{{ cookiecutter.project_name }}auth.{{ cookiecutter.project_name|replace('_', ' ')|title|replace(' ', '') }}User"
+AUTH_USER_MODEL = "{{ cookiecutter.project_name }}_auth.{{ cookiecutter.project_name|replace('_', ' ')|title|replace(' ', '') }}User"
 LOGIN_REDIRECT_URL = "{{ cookiecutter.app_name }}:index"
