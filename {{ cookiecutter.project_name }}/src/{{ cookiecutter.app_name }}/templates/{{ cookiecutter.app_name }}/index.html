@@ -1,5 +1,7 @@
-{% extends '{{ cookiecutter.app_name }}/base.html' %}
+{% set extend = "{% extends '" + {{ cookiecutter.app_name }} +  "/base.html'" %}
+{{ extend }}
 
+{% raw %}
 {% block title %}
     index
 {% endblock %}
@@ -20,3 +22,5 @@
     <script>
     </script>
 {% endblock %}
+
+{% endrow %}
