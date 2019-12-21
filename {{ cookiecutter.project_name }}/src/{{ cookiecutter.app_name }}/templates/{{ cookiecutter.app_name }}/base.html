@@ -8,8 +8,8 @@
 </head>
 <body>
 {% endraw %}
-    {% set extend = "{% extends '" + cookiecutter.app_name  +  "/header.html'%}" %}
-    {{ extend }}
+    {% set include_stmt = "{% include '" + cookiecutter.app_name  +  "/header.html'%}" %}
+    {{ include_stmt }}
 {% raw %}
     {% block content %} {% endblock %}
     {% block scripts %} {% endblock %}
