@@ -146,3 +146,4 @@ CELERY_BROKER_TRANSPORT_OPTIONS = {'max_retries': 1}
 
 AUTH_USER_MODEL = "{{ cookiecutter.project_name }}_auth.{{ cookiecutter.project_name|replace('_', ' ')|title|replace(' ', '') }}User"
 LOGIN_REDIRECT_URL = "{{ cookiecutter.app_name }}:index"
+LOGOUT_REDIRECT_URL = "{{ cookiecutter.app_name }}:index"

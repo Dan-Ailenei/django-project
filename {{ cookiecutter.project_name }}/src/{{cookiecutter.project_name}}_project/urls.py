@@ -18,7 +18,7 @@ from django.urls import path
 from django.urls import include
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', include('{{ cookiecutter.app_name }}.urls')),
     path('', include('{{ cookiecutter.project_name }}_auth.urls')),
-    path('admin/', admin.site.urls),
 ]
