@@ -7,10 +7,7 @@
     {% block style %} {% endblock %}
 </head>
 <body>
-{% endraw %}
-    {% set include_stmt = "{% include '" + cookiecutter.app_name  +  "/header.html'%}" %}
-    {{ include_stmt }}
-{% raw %}
+{% include 'header.html' %}
     {% block content %} {% endblock %}
     {% block scripts %} {% endblock %}
 </body>
