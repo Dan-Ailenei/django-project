@@ -12,11 +12,11 @@ def user(request, db):
 
 def test_login(client, user):
     assert client.get('/login').status_code == 200
-    resp = client.post('/login', {'username': 'test_user', 'password': 'test_password'})
+    resp = client.post('/login/', {'username': 'test_user', 'password': 'test_password'})
     assert resp.status_code == 302
 
 
 def test_logout(client, user):
     client.force_login(user)
-    resp = client.get('/logout')
+    resp = client.get('/logout/')
     assert resp.status_code == 302
