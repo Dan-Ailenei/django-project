@@ -11,7 +11,7 @@ def user(request, db):
 
 
 def test_login(client, user):
-    assert client.get('/login').status_code == 200
+    assert client.get('/login/').status_code == 200
     resp = client.post('/login/', {'username': 'test_user', 'password': 'test_password'})
     assert resp.status_code == 302
 
