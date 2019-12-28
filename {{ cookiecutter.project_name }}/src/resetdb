@@ -2,5 +2,6 @@
 
 rm -rf {{ cookiecutter.project_name }}_auth/migrations
 rm -rf {{ cookiecutter.app_name }}/migrations
+rm db.sqlite3
 ./manage.py makemigrations {{ cookiecutter.app_name }} {{ cookiecutter.project_name }}_auth
 ./manage.py migrate
